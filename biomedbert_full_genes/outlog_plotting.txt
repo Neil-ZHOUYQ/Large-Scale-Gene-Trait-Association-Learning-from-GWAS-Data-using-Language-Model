@@ -1,0 +1,63 @@
+
+Generating scientific visualization plots for domain adaptive pretraining...
+
+Results will be saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots
+✓ Training loss plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_loss_curve.png
+✓ Perplexity plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_perplexity.png
+✓ Learning rate plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_learning_rate.png
+✓ Epoch metrics plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_epoch_metrics.png
+Loading model for token prediction analysis...
+✓ Token prediction plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_token_prediction.png
+Analyzing domain vocabulary...
+Error analyzing domain vocabulary: [Errno 2] No such file or directory: '/mnt/home/zhouyuqi/bert/out/nlp/biomedbert/datasets/case/case_train_dataset.GWAS_ASD.20241107.txt.gz'
+
+Visualization complete! All plots saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots
+
+Generating scientific visualization plots for domain adaptive pretraining...
+
+Results will be saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots
+✓ Training loss plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_loss_curve.png
+✓ Perplexity plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_perplexity.png
+✓ Learning rate plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_learning_rate.png
+✓ Epoch metrics plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_epoch_metrics.png
+Loading model for token prediction analysis...
+✓ Token prediction plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_token_prediction.png
+Analyzing domain vocabulary...
+✓ Domain vocabulary plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_domain_vocabulary.png
+
+Visualization complete! All plots saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+No trainer_state.json found at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/trainer_state.json
+Learning curve plots: FAILED
+Word embedding visualization: SUCCESS
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+No trainer_state.json found at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/trainer_state.json
+Learning curve plots: FAILED
+Word embedding visualization: SUCCESS
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+Learning curve plots: SUCCESS
+Word embedding visualization: SUCCESS
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization

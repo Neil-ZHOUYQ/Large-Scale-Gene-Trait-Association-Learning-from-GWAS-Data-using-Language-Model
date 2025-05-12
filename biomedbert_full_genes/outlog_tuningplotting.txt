@@ -1,0 +1,358 @@
+
+Generating scientific visualization plots for domain adaptive pretraining...
+
+Results will be saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots
+✓ Training loss plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_loss_curve.png
+✓ Perplexity plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_perplexity.png
+✓ Learning rate plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_learning_rate.png
+✓ Epoch metrics plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_epoch_metrics.png
+Loading model for token prediction analysis...
+✓ Token prediction plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/plots/DAP_token_prediction.png
+Analyzing domain vocabulary...
+Traceback (most recent call last):
+  File "/mnt/home/zhouyuqi/bert/codes/2_plotting_1.py", line 481, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/home/zhouyuqi/bert/codes/2_plotting_1.py", line 476, in main
+    analyze_domain_vocabulary()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/home/zhouyuqi/bert/codes/2_plotting_1.py", line 407, in analyze_domain_vocabulary
+    tokens = tokenizer.tokenize(text.lower())
+  File "/mnt/home/zhouyuqi/miniconda3/envs/6010/lib/python3.13/site-packages/transformers/tokenization_utils.py", line 697, in tokenize
+    tokenized_text.extend(self._tokenize(token))
+                          ~~~~~~~~~~~~~~^^^^^^^
+  File "/mnt/home/zhouyuqi/miniconda3/envs/6010/lib/python3.13/site-packages/transformers/models/bert/tokenization_bert.py", line 161, in _tokenize
+    for token in self.basic_tokenizer.tokenize(
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        text, never_split=self.all_special_tokens if not split_special_tokens else None
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/mnt/home/zhouyuqi/miniconda3/envs/6010/lib/python3.13/site-packages/transformers/models/bert/tokenization_bert.py", line 348, in tokenize
+    text = self._tokenize_chinese_chars(text)
+  File "/mnt/home/zhouyuqi/miniconda3/envs/6010/lib/python3.13/site-packages/transformers/models/bert/tokenization_bert.py", line 409, in _tokenize_chinese_chars
+    output.append(char)
+    ~~~~~~~~~~~~~^^^^^^
+KeyboardInterrupt
+Loading model for detailed token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'brca1'
+        Avg probability for 'brca1': 0.0549
+      Testing term: 'associated'
+        Avg probability for 'associated': 0.9945
+      Testing term: 'cancer'
+        Avg probability for 'cancer': 0.9137
+      Testing term: 'gene'
+        Avg probability for 'gene': 1.0000
+  Processing sentence 2/3: 'Autism spectrum disorder is associated with SHANK3.'
+      Testing term: 'shank3'
+        Avg probability for 'shank3': 0.0000
+      Testing term: 'associated'
+        Avg probability for 'associated': 1.0000
+      Testing term: 'disorder'
+        Avg probability for 'disorder': 0.9875
+      Testing term: 'autism'
+        Avg probability for 'autism': 0.9954
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'disc1'
+        Avg probability for 'disc1': 0.0246
+      Testing term: 'linked'
+        Avg probability for 'linked': 0.0285
+      Testing term: 'schizophrenia'
+        Avg probability for 'schizophrenia': 0.0963
+
+Generating plots...
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_1_Gene_BRCA1_is_associated_with.png
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_2_Autism_spectrum_disorder_is_as.png
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_3_Schizophrenia_has_been_linked.png
+Loading model for detailed token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences...
+  Processing sentence 1/3: 'BRCA1 is associated with breast cancer.'
+      Testing term: 'brca1'
+        Avg probability for 'brca1': 0.0869
+      Testing term: 'cancer'
+        Avg probability for 'cancer': 0.9257
+      Testing term: 'associated'
+        Avg probability for 'associated': 0.9951
+  Processing sentence 2/3: 'ASD is associated with SHANK3.'
+      Testing term: 'ASD'
+        Avg probability for 'ASD': 0.0013
+      Testing term: 'shank3'
+        Avg probability for 'shank3': 0.0001
+      Testing term: 'associated'
+        Avg probability for 'associated': 0.9999
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia'
+        Avg probability for 'schizophrenia': 0.0963
+      Testing term: 'linked'
+        Avg probability for 'linked': 0.0285
+      Testing term: 'disc1'
+        Avg probability for 'disc1': 0.0246
+
+Generating plots...
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_1_BRCA1_is_associated_with_breas.png
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_2_ASD_is_associated_with_SHANK3.png
+  ✓ Plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_detailed/token_prediction_sentence_3_Schizophrenia_has_been_linked.png
+Loading model for Top-5 token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences and predicting top 5 tokens...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'gene' starting at index 0
+        Processed mask position 1/1 (Original: 'gene')
+      Testing term: 'brca1' starting at index 1
+        Processed mask position 1/1 (Original: 'brca1')
+      Testing term: 'associated' starting at index 3
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'cancer' starting at index 6
+        Processed mask position 1/1 (Original: 'cancer')
+  Processing sentence 2/3: 'Autism spectrum disorder is associated with SHANK3.'
+      Testing term: 'autism' starting at index 0
+        Processed mask position 1/1 (Original: 'autism')
+      Testing term: 'disorder' starting at index 2
+        Processed mask position 1/1 (Original: 'disorder')
+      Testing term: 'associated' starting at index 4
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'shank3' starting at index 6
+        Processed mask position 1/2 (Original: 'shank')
+        Processed mask position 2/2 (Original: '##3')
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia' starting at index 0
+        Processed mask position 1/1 (Original: 'schizophrenia')
+      Testing term: 'linked' starting at index 3
+        Processed mask position 1/1 (Original: 'linked')
+      Testing term: 'disc1' starting at index 8
+        Processed mask position 1/2 (Original: 'disc')
+        Processed mask position 2/2 (Original: '##1')
+
+Generating Top-5 prediction plots...
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Gene_BRCA1_is_associated_with_term_gene_idx0.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Gene_BRCA1_is_associated_with_term_brca1_idx1.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Gene_BRCA1_is_associated_with_term_associated_idx3.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Gene_BRCA1_is_associated_with_term_cancer_idx6.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Autism_spectrum_disorder_is_as_term_autism_idx0.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Autism_spectrum_disorder_is_as_term_disorder_idx2.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Autism_spectrum_disorder_is_as_term_associated_idx4.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Autism_spectrum_disorder_is_as_term_shank3_idx6.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Schizophrenia_has_been_linked_term_schizophrenia_idx0.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Schizophrenia_has_been_linked_term_linked_idx3.png
+    ✓ Top-5 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top5/top5_preds_sent3_Schizophrenia_has_been_linked_term_disc1_idx8.png
+Loading model for Top-10 token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences and predicting top 10 tokens...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'gene' starting at index 0
+        Processed mask position 1/1 (Original: 'gene')
+      Testing term: 'brca1' starting at index 1
+        Processed mask position 1/1 (Original: 'brca1')
+      Testing term: 'associated' starting at index 3
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'cancer' starting at index 6
+        Processed mask position 1/1 (Original: 'cancer')
+  Processing sentence 2/3: 'Autism spectrum disorder is associated with SHANK3.'
+      Testing term: 'autism' starting at index 0
+        Processed mask position 1/1 (Original: 'autism')
+      Testing term: 'disorder' starting at index 2
+        Processed mask position 1/1 (Original: 'disorder')
+      Testing term: 'associated' starting at index 4
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'shank3' starting at index 6
+        Processed mask position 1/2 (Original: 'shank')
+        Processed mask position 2/2 (Original: '##3')
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia' starting at index 0
+        Processed mask position 1/1 (Original: 'schizophrenia')
+      Testing term: 'linked' starting at index 3
+        Processed mask position 1/1 (Original: 'linked')
+      Testing term: 'disc1' starting at index 8
+        Processed mask position 1/2 (Original: 'disc')
+        Processed mask position 2/2 (Original: '##1')
+
+Generating Top-10 prediction plots...
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_gene_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_brca1_idx1.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_associated_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_cancer_idx6.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Autism_spectrum_disorder_is_as_term_autism_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Autism_spectrum_disorder_is_as_term_disorder_idx2.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Autism_spectrum_disorder_is_as_term_associated_idx4.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Autism_spectrum_disorder_is_as_term_shank3_idx6.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_schizophrenia_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_linked_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_disc1_idx8.png
+Loading model for Top-10 token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences and predicting top 10 tokens...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'gene' starting at index 0
+        Processed mask position 1/1 (Original: 'gene')
+      Testing term: 'brca1' starting at index 1
+        Processed mask position 1/1 (Original: 'brca1')
+      Testing term: 'associated' starting at index 3
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'cancer' starting at index 6
+        Processed mask position 1/1 (Original: 'cancer')
+  Processing sentence 2/3: 'ASD is associated with SHANK3.'
+      Testing term: 'associated' starting at index 2
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'shank3' starting at index 4
+        Processed mask position 1/2 (Original: 'shank')
+        Processed mask position 2/2 (Original: '##3')
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia' starting at index 0
+        Processed mask position 1/1 (Original: 'schizophrenia')
+      Testing term: 'linked' starting at index 3
+        Processed mask position 1/1 (Original: 'linked')
+      Testing term: 'disc1' starting at index 8
+        Processed mask position 1/2 (Original: 'disc')
+        Processed mask position 2/2 (Original: '##1')
+
+Generating Top-10 prediction plots...
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_gene_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_brca1_idx1.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_associated_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_cancer_idx6.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_associated_idx2.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_shank3_idx4.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_schizophrenia_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_linked_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_disc1_idx8.png
+Loading model for Top-10 token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences and predicting top 10 tokens...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'gene' starting at index 0
+        Processed mask position 1/1 (Original: 'gene')
+      Testing term: 'brca1' starting at index 1
+        Processed mask position 1/1 (Original: 'brca1')
+      Testing term: 'associated' starting at index 3
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'cancer' starting at index 6
+        Processed mask position 1/1 (Original: 'cancer')
+  Processing sentence 2/3: 'ASD is associated with SHANK3.'
+      Testing term: 'ASD' starting at index 0
+        Processed mask position 1/1 (Original: 'asd')
+      Testing term: 'associated' starting at index 2
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'shank3' starting at index 4
+        Processed mask position 1/2 (Original: 'shank')
+        Processed mask position 2/2 (Original: '##3')
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia' starting at index 0
+        Processed mask position 1/1 (Original: 'schizophrenia')
+      Testing term: 'linked' starting at index 3
+        Processed mask position 1/1 (Original: 'linked')
+      Testing term: 'disc1' starting at index 8
+        Processed mask position 1/2 (Original: 'disc')
+        Processed mask position 2/2 (Original: '##1')
+
+Generating Top-10 prediction plots...
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_gene_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_brca1_idx1.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_associated_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_cancer_idx6.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_ASD_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_associated_idx2.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_shank3_idx4.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_schizophrenia_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_linked_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_disc1_idx8.png
+Loading model for Top-10 token prediction analysis...
+Loading domain-adapted model from: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01
+Model loaded successfully.
+Analyzing sentences and predicting top 10 tokens...
+  Processing sentence 1/3: 'Gene BRCA1 is associated with breast cancer.'
+      Testing term: 'gene' starting at index 0
+        Processed mask position 1/1 (Original: 'gene')
+      Testing term: 'brca1' starting at index 1
+        Processed mask position 1/1 (Original: 'brca1')
+      Testing term: 'associated' starting at index 3
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'breast' starting at index 5
+        Processed mask position 1/1 (Original: 'breast')
+      Testing term: 'cancer' starting at index 6
+        Processed mask position 1/1 (Original: 'cancer')
+  Processing sentence 2/3: 'ASD is associated with SHANK3.'
+      Testing term: 'ASD' starting at index 0
+        Processed mask position 1/1 (Original: 'asd')
+      Testing term: 'associated' starting at index 2
+        Processed mask position 1/1 (Original: 'associated')
+      Testing term: 'shank3' starting at index 4
+        Processed mask position 1/2 (Original: 'shank')
+        Processed mask position 2/2 (Original: '##3')
+  Processing sentence 3/3: 'Schizophrenia has been linked to various genes including DISC1.'
+      Testing term: 'schizophrenia' starting at index 0
+        Processed mask position 1/1 (Original: 'schizophrenia')
+      Testing term: 'linked' starting at index 3
+        Processed mask position 1/1 (Original: 'linked')
+      Testing term: 'disc1' starting at index 8
+        Processed mask position 1/2 (Original: 'disc')
+        Processed mask position 2/2 (Original: '##1')
+
+Generating Top-10 prediction plots...
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_gene_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_brca1_idx1.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_associated_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_breast_idx5.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Gene_BRCA1_is_associated_with_term_cancer_idx6.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_ASD_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_associated_idx2.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_ASD_is_associated_with_SHANK3_term_shank3_idx4.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_schizophrenia_idx0.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_linked_idx3.png
+    ✓ Top-10 plot saved to /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization_top10/top10_preds_sent3_Schizophrenia_has_been_linked_term_disc1_idx8.png
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+Learning curve plots: SUCCESS
+Error visualizing word embeddings: Found array with 0 feature(s) (shape=(2, 0)) while a minimum of 1 is required by PCA.
+Word embedding visualization: FAILED
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+Learning curve plots: SUCCESS
+Error visualizing word embeddings: perplexity must be less than n_samples
+Word embedding visualization: FAILED
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+Learning curve plots: SUCCESS
+Word embedding visualization: SUCCESS
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
+Some weights of the model checkpoint at microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertModel were not initialized from the model checkpoint at /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+BertSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Generating scientific visualizations for Domain Adaptive Pretraining...
+Learning curve plots: SUCCESS
+Error visualizing word embeddings: perplexity must be less than n_samples
+Word embedding visualization: FAILED
+Attention visualization for gene-trait pairs: SUCCESS
+All visualizations saved to: /mnt/home/zhouyuqi/bert/out/nlp/biomedbert/DAP/250429_113915_E9_B32_LR2e-05_WD0.01/visualization
